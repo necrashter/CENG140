@@ -74,13 +74,14 @@ void add_index(Node **head,int index, char *data){
 	n->next = new;
 }
 
-void remove_last(Node *head){
-	if(head->next == NULL){
-		dispose_node(head);
+void remove_last(Node **head){
+	if((*head)->next == NULL){
+		dispose_node(*head);
+		*head=NULL;
 		return;
 	}
 
-	Node *node = head;
+	Node *node = *head;
 	while(node->next->next != NULL)node=node->next;
 
 	dispose_node(node->next);
@@ -89,7 +90,9 @@ void remove_last(Node *head){
 
 void remove_first(Node **head){
 	if((*head)->next == NULL){
-		dispose_node(*head); return;
+		dispose_node(*head);
+	       	*head =NULL;
+		return;
 	}
 
 	Node *new = (*head)->next;

@@ -20,7 +20,7 @@ void prepend(Node **head, char *data);
 void add_index(Node **head, int index, char *data);
 
 void remove_first(Node **head);
-void remove_last(Node *head);
+void remove_last(Node **head);
 void remove_index(Node **head, int index);
 
 void print_list(Node *head);
