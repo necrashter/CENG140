@@ -113,6 +113,7 @@ void remove_index(Node **head, int index){
 	}
 	
 	Node *n = *head;
+	--index;
 	for(int i = 0;i<index;++i){
 		if(n->next){
 			n=n->next;

@@ -98,6 +98,16 @@ int main(void){
 		    }else{
 			    append(todo,input+7);
 		    }
+	    }else if(0==strncmp(input,"add",sizeof(char)*3)){
+		    int index = atoi(input+4);
+		    char *arg=input+4;
+		    while(*arg!='\0'){
+			    ++arg;
+			    if(*arg==' '){
+				    ++arg; break;
+			    }
+		    }
+		    add_index(&todo,index,arg);
 	    }else if(0==strncmp(input,"list",sizeof(char)*4)){
 		    if(todo)print_list(todo); else puts("No items to list");
 	    } else if(0==strncmp(input,"pop",sizeof(char)*3) || 0==strncmp(input,"remove last",sizeof(char)*11)){
