@@ -12,6 +12,7 @@ struct Node {
 Node* create_node(char *data, Node* next);
 Node* create_head(char *data);
 void dispose_node(Node *n);
+void dispose_list(Node *n);
 
 Node* tail(Node *head);
 

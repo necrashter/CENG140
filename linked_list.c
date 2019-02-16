@@ -38,6 +38,13 @@ void dispose_node(Node *n){
 	free(n);
 }
 
+void dispose_list(Node *n){
+	while(n){
+		Node *old = n;
+		n = n->next;
+		dispose_node(old);
+	}
+}
 Node* tail(Node *head){
 	Node *out =head;
 	while(out->next != NULL)out=out->next;

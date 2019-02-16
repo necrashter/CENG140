@@ -16,7 +16,7 @@ int main(){
 	
 	remove_index(&a,2);
 	remove_first(&a);
-	remove_last(a);
+	remove_last(&a);
 
 	append(a, "Können sie mir sagen ob ich Unicode Characters nutzen kann?");
 
