@@ -38,7 +38,6 @@ Node* loadList(){
 
 	forever {
 		long pos = ftell(f);
-		printf("pos: %d\n",pos);
 		if(fgetc(f)==EOF)break;
 		fseek(f, pos, SEEK_SET);
 		

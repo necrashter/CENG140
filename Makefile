@@ -8,5 +8,6 @@ todoer: linked_list.o
 
 clean:
 	rm -f todoer
+	rm -f todo.txt
 	rm -f linked_list.o
 	rm -f test_linked_list
