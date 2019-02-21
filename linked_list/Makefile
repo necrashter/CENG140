@@ -1,4 +1,4 @@
-CFLAGS=-Wall
+CFLAGS=-Wall -Wextra
 
 all: linked_list.o test_linked_list todoer
 
